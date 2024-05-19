@@ -6,6 +6,7 @@
  * @last modified by  : vkm
 **/
 public class CallOutOrgAtoB {
+    @future(callout=true)
     public static void ConnectingOrg(String name , String Phone, String Email) {
         HTTP h = new HTTP();
         HttpRequest req = new HttpRequest();
@@ -13,6 +14,7 @@ public class CallOutOrgAtoB {
         req.setMethod('POST');
         req.setHeader('Content-Type', 'application/json;charset=UTF-8');
         req.setBody('{"Name" :"'+name+'", "Phone" :"'+Phone+'", "Email" :"'+Email+'"}');
+        //req.setBody('{"Name" : "Vishal" , "Phone" : "7890","Email":"v@gmail.com"}');
         HttpResponse response = h.send(req);
         system.debug(response.getBody());
         if(response.getStatusCode() == 200 || response.getStatusCode() == 201) {
