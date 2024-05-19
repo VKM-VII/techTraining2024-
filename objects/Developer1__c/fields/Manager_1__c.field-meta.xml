@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Manager_1__c</fullName>
+    <description>This field stores the Name of the manager to which the Developer Reports to</description>
+    <externalId>false</externalId>
+    <label>Reporting Manager</label>
+    <referenceTo>Maanager_1__c</referenceTo>
+    <relationshipLabel>Developers1</relationshipLabel>
+    <relationshipName>Developers1</relationshipName>
+    <relationshipOrder>0</relationshipOrder>
+    <reparentableMasterDetail>false</reparentableMasterDetail>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

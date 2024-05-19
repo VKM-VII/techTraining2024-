@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EmptyPhoneEmail</fullName>
+    <active>true</active>
+    <errorConditionFormula>OR(
+    ISBLANK(Phone__c),
+    ISBLANK(Email__c)
+)</errorConditionFormula>
+    <errorMessage>You must fill email and phone before saving</errorMessage>
+</ValidationRule>

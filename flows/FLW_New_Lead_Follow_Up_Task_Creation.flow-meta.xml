@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>Create_New_Task_Action_1</name>
+        <label>Create New Task Action 1</label>
+        <locationX>176</locationX>
+        <locationY>323</locationY>
+        <actionName>FeedItem.NewTaskFromFeedItem</actionName>
+        <actionType>quickAction</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>contextId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>Subject</name>
+            <value>
+                <stringValue>Follow-Up with New Lead</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>ActivityDate</name>
+            <value>
+                <elementReference>Date_3</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>Description</name>
+            <value>
+                <stringValue>Follow-Up with New Lead</stringValue>
+            </value>
+        </inputParameters>
+        <nameSegment>FeedItem.NewTaskFromFeedItem</nameSegment>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <apiVersion>60.0</apiVersion>
+    <environments>Default</environments>
+    <formulas>
+        <name>Date</name>
+        <dataType>Date</dataType>
+        <expression>TODAY()+3</expression>
+    </formulas>
+    <formulas>
+        <name>Date_3</name>
+        <dataType>Date</dataType>
+        <expression>TODAY()-3</expression>
+    </formulas>
+    <formulas>
+        <name>Owner</name>
+        <dataType>String</dataType>
+        <expression>{!$Record.OwnerId}</expression>
+    </formulas>
+    <interviewLabel>FLW_ {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>FLW_ New Lead Follow-Up Task Creation</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Create_New_Task_Action_1</targetReference>
+        </connector>
+        <object>Lead</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

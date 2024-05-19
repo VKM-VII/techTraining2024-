@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>UP</fullName>
+        <default>false</default>
+        <label>UP</label>
+    </customValue>
+    <customValue>
+        <fullName>HP</fullName>
+        <default>false</default>
+        <label>HP</label>
+    </customValue>
+    <customValue>
+        <fullName>MP</fullName>
+        <default>false</default>
+        <label>MP</label>
+    </customValue>
+    <customValue>
+        <fullName>GOA</fullName>
+        <default>false</default>
+        <label>GOA</label>
+    </customValue>
+    <customValue>
+        <fullName>HR</fullName>
+        <default>false</default>
+        <label>HR</label>
+    </customValue>
+    <customValue>
+        <fullName>AP</fullName>
+        <default>false</default>
+        <label>AP</label>
+    </customValue>
+    <customValue>
+        <fullName>Florida</fullName>
+        <default>false</default>
+        <label>Florida</label>
+    </customValue>
+    <customValue>
+        <fullName>Alaska</fullName>
+        <default>false</default>
+        <label>Alaska</label>
+    </customValue>
+    <customValue>
+        <fullName>New York</fullName>
+        <default>false</default>
+        <label>New York</label>
+    </customValue>
+    <masterLabel>state GVS</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>
