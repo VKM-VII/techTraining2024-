@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>And_Operation__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(ISPICKVAL(Active_In_College__c, &quot;Yes&quot;), &quot;In The College&quot;,
+IF(ISPICKVAL(Active_On_Social_Media__c, &quot;Yes&quot;), &quot;Active on Social Media&quot;,
+IF(ISPICKVAL(Active_In_College__c, &quot;No&quot;), &quot;Not In The College&quot;, &quot;Other Value&quot;)))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>And Operation</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>
